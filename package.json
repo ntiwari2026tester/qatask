@@ -1,6 +1,6 @@
 {
   "name": "ricr-dashboard-qa-task",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RICR Dashboard QA Tester Evaluation Task",
   "main": "src/utils/pagination.util.ts",
   "scripts": {
