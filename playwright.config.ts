@@ -11,6 +11,7 @@ export default defineConfig({
     baseURL: 'http://localhost:5000/api',
     trace: 'on-first-retry',
   },
+  
   projects: [
     {
       name: 'chromium',
