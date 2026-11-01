@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                bat 'mvn clean test -Dtest=Billing_Deposit'
+                bat 'mvn clean test'
             }
         }
     }
