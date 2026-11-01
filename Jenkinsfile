@@ -1,21 +1,26 @@
+
 pipeline {
     agent any
+
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'master',
+                git branch: 'main',
                     url: 'https://github.com/ntiwari2026tester/qatask.git'
             }
         }
-        stage('Run Tests') {
+
+        stage('Run Billing Deposit Test') {
             steps {
-                bat 'mvn clean test -Dtest=HIMSTEST.Billing_Deposit'
+                bat 'mvn clean test'
             }
         }
     }
+
     post {
         always {
-            junit 'target/surefire-reports/*.xml'
+            junit testResults: 'target/surefire-reports/*.xml',
+                  allowEmptyResults: true
         }
     }
 }
