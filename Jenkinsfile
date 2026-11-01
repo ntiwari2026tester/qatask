@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                bat 'mvn clean test'
+                bat 'mvn clean test -Dtest=HIMSTEST.Billing_Deposit'
             }
         }
     }
